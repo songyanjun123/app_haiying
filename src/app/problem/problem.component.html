@@ -1,0 +1,131 @@
+<header class="am-titlebar-cols">
+	<a routerLink="/my-center" class="icon-cheveron-left"></a>
+	<h2 class="am-titlebar-title">常见问题</h2>
+</header>
+<div class="am-container">
+	<!-- <section class="am-panel am-panel-default" *ngFor='let item of dataList'>
+	  <header class="am-panel-hd">
+	    <h3 class="am-panel-title">{{item.QuestionDesc}}</h3>
+	  </header>
+	  <div class="am-panel-bd">
+	      {{item.AnswerDesc}}
+	  </div>
+	</section> -->
+
+	<div class="navTab">
+		<ul>
+			<li [ngClass]="item==0?'blue allFont':'gray'" (click)="tabProblem(0)">
+				新手问题
+			</li>
+			<li [ngClass]="item == 1 ? 'blue allFont':'gray'" (click)="tabProblem(1)">
+				金币问题
+			</li>
+			<li [ngClass]="item==2?'blue allFont':'gray'" (click)="tabProblem(2)">
+				邀请问题
+			</li>
+			<li [ngClass]="item==3?'blue allFont':'gray'" (click)="tabProblem(3)">
+				提现问题
+			</li>
+			<li [ngClass]="item==4?'blue allFont':'gray'" (click)="tabProblem(4)">
+				收益问题
+			</li>
+			<li [ngClass]="item==5?'blue allFont':'gray'" (click)="tabProblem(5)">
+				账户问题
+			</li>
+		</ul>
+	</div>
+	<div class="navTabCon" [style.display]="item==0?'block':'none'">
+		<h2 class="blueFont">新手问题</h2>
+		<ul>
+			<li class="allBg">
+				<h2 (click)="showItem()">海英赚是什么？ <span [ngClass]="showItem1==0?'icon-cheveron-down':'icon-cheveron-right'"></span></h2>
+				<p [style.display]="showItem1==0?'block':'none'">海英赚是一款致力于提高用户阅读价值的资讯阅读软件。
+					在提供给用户最新最热的资讯的同时，我们会把从广告中
+					获得的大部分收益以金币的形式分享给用户。用户通过阅
+					读获得的金币可以兑换话费或进行微信现金提现。</p>
+			</li>
+			<li  class="allBg">
+				<h2 (click)="showItemB()">为什么海英赚会给您奖励？<span [ngClass]="showItem2==0?'icon-cheveron-down':'icon-cheveron-right'"></span></h2>
+				<p [style.display]="showItem2==0?'block':'none'"></p>
+			</li>
+		</ul>
+	</div>
+	<div class="navTabCon" [style.display]="item==1?'block':'none'">
+		<h2 class="blueFont">英币问题</h2>
+		<ul>
+			<li class="allBg">
+				<h2 (click)="showItem()">英币是什么？<span [ngClass]="showItem1==0?'icon-cheveron-down':'icon-cheveron-right'"></span></h2>
+				<p [style.display]="showItem1==0?'block':'none'">英币是海英赚的货币单位，每天你可以通过登录、签到、
+					阅读文章、分享文章等获取英币，英币可以兑换话费或进
+					行微信现金提现。</p>
+			</li>
+			<li class="allBg">
+				<h2 (click)="showItemB()">如何获得更多英币？<span [ngClass]="showItem2==0?'icon-cheveron-down':'icon-cheveron-right'"></span></h2>
+				<p [style.display]="showItem2==0?'block':'none'"></p>
+			</li>
+		</ul>
+	</div>
+	<div class="navTabCon" [style.display]="item==2?'block':'none'">
+		<h2 class="blueFont">邀请问题</h2>
+		<ul>
+			<li class="allBg">
+				<h2 (click)="showItem()">邀请好友有什么好处？<span [ngClass]="showItem1==0?'icon-cheveron-down':'icon-cheveron-right'"></span></h2>
+				<p [style.display]="showItem1==0?'block':'none'">邀请好友即为收徒，每邀请一位好友成为徒弟并让其有效
+					登录即可获得徒弟相应奖励。除外徒弟每次阅读也可获得
+					相应奖励，师傅都可以获得相应奖励。</p>
+			</li>
+			<li class="allBg">
+				<h2 (click)="showItemB()">如何邀请好友？<span [ngClass]="showItem2==0?'icon-cheveron-down':'icon-cheveron-right'"></span></h2>
+			</li>
+		</ul>
+	</div>
+	<div class="navTabCon" [style.display]="item==3?'block':'none'">
+		<h2 class="blueFont">英币提现问题问题</h2>
+		<ul>
+			<li class="allBg">
+				<h2 (click)="showItem()">如何提现？<span [ngClass]="showItem1==0?'icon-cheveron-down':'icon-cheveron-right'"></span></h2>
+				<p [style.display]="showItem1==0?'block':'none'">目前海英赚仅支持微信提现。具体操作步骤：进入应用，
+					“我的”—>点击“我的钱包”—>“用户提现”—>选
+					择提现金额进行提现。</p>
+			</li>
+		</ul>
+	</div>
+	<div class="navTabCon" [style.display]="item==4?'block':'none'">
+		<h2 class="blueFont">收益问题</h2>
+		<ul>
+			<li class="allBg">
+				<h2 (click)="showItem()">如何查询每天的收入？<span [ngClass]="showItem1==0?'icon-cheveron-down':'icon-cheveron-right'"></span></h2>
+				<p [style.display]="showItem1==0?'block':'none'">进入应用海英赚APP，点击“我的”—>“我的钱包”
+					—>”提现记录”可以查询。</p>
+			</li>
+			<li class="allBg">
+				<h2 (click)="showItemB()">如何查询徒弟贡献的奖励？<span [ngClass]="showItem2==0?'icon-cheveron-down':'icon-cheveron-right'"></span></h2>
+				<p [style.display]="showItem2==0?'block':'none'">进入应用海英赚APP，点击“我的”—>“我的钱包”
+					—>”收益明细”可以查询。</p>
+			</li>
+		</ul>
+	</div>
+	<div class="navTabCon" [style.display]="item==5?'block':'none'">
+		<h2 class="blueFont">账户问题</h2>
+		<ul>
+			<li class="allBg">
+				<h2 (click)="showItem()">注册不了？<span [ngClass]="showItem1==0?'icon-cheveron-down':'icon-cheveron-right'"></span></h2>
+				<p [style.display]="showItem1==0?'block':'none'">海英赚APP支持微信登录和手机号登录（需注册）。</p>
+			</li>
+			<li class="allBg">
+				<h2 (click)="showItemB()">什么是作弊行为？<span [ngClass]="showItem2==0?'icon-cheveron-down':'icon-cheveron-right'"></span></h2>
+				<p [style.display]="showItem2==0?'block':'none'">
+					<span>(1)用同一手机注册或登录多个账号邀请或获取收益</span><br/>
+					<span>(2)用虚假号、空号等用违规的手机号注册邀请或获取收益</span>
+				</p>
+			</li>
+			<li class="allBg">
+				<h2 (click)="showItemC()">作弊的后果？<span [ngClass]="showItem3==0?'icon-cheveron-down':'icon-cheveron-right'"></span></h2>
+				<p [style.display]="showItem3==0?'block':'none'">
+					海英赚有严格反作弊机制，对于一旦发现作弊行为将永远封禁，希望大家共同维护软件使用秩序。
+				</p>
+			</li>
+		</ul>
+	</div>
+
+</div>

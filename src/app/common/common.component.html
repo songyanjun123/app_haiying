@@ -1,0 +1,24 @@
+<header class="am-titlebar-cols">
+	<a routerLink="/my-center" class="icon-cheveron-left"></a>
+	<h2 class="am-titlebar-title">我的评论</h2>
+</header>
+<div class="am-container">
+	
+	<article>
+		<div class="common" *ngFor="let item of nullArr">
+			<div class="comImg">
+				<img [src]="item.UserImg" alt="">
+			</div>
+			<div class="comInfo">
+				<h3 class="name">{{item.NickName}}</h3>
+				<p class="time"><span>{{item.CreateDate | date:'yyyy-MM-dd HH:mm:ss'}}</span></p>
+				<h4 class="title">{{item.UserComment}}</h4>
+				<p class="atticle">
+					{{item.ArticleTitle}}
+				</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</article>
+	<div class="tixianBtn fontSize"><span _ngcontent-c6="" (click)="getMore()">点击加载更多</span></div>
+</div>

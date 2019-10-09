@@ -1,0 +1,141 @@
+<div class="am-container">  
+	<div class="am-top-img">
+		<img src="assets/img/invite2Top.png" />
+		<div class="btn_invite">
+			<a id="inviteBtn" (click)="showShare()"><p>立即邀请赚钱</p></a>
+		</div>
+	</div>
+	<div class="friend_count blueFont">
+		<div class="myFr_count">我的好友：<b>{{userCount}}人</b></div>
+		<div class="myMon_count fl_left">我的钱包：<b>{{userMoney}}英币</b></div>
+		<div class="sunFr_count">已成功邀请：<b>{{userCount}}人</b></div>
+	</div>
+	<div class="clear"></div>
+	<div class="box_select">
+		<div class="sel_title">
+			<div class="box_title">
+				<div class="con_title">
+					<b [ngClass]='item==0?"blueBottom blueFont grayRight":" "'  (click)="inviteTab(0)">奖励说明</b>
+					<b [ngClass]='item==1?"blueBottom blueFont grayLeft":" "'  (click)="inviteTab(1)">好友列表</b>
+				</div>
+			</div>
+		</div>
+		<div [style.display]='item==0?"block":"none"' class="b_notes_cont marBottom">
+			<p>收徒<b class="blueFont">2.5元</b>奖励怎么领取？</p>
+			<div class="box_reward">
+				<div class="rew grayBorder">
+					<div class="rew_img">
+						<img src="assets/img/invite2_reward.png" />
+					</div>
+					<div class="rew_name">首登</div>
+					<div class="jl_term">
+						<div>奖励</div>
+						<div class="blueFont"><b>0.2</b>元</div>
+					</div>
+				</div>
+				<div class="rew grayBorder">
+					<div class="rew_img">
+						<img src="assets/img/invite2_reward.png" />
+					</div>
+					<div class="rew_name">首签</div>
+					<div class="jl_term">
+						<div>奖励</div>
+						<div class="blueFont"><b>0.3</b>元</div>
+					</div>
+				</div>
+				<div class="rew grayBorder marTop">
+					<div class="rew_img">
+						<img src="assets/img/invite2_reward.png" />
+					</div>
+					<div class="rew_name">签X3</div>
+					<div class="jl_term">
+						<div>奖励</div>
+						<div class="blueFont"><b>0.5</b>元</div>
+					</div>
+				</div>
+				<div class="rew grayBorder marTop"> 
+					<div class="rew_img">
+						<img src="assets/img/invite2_reward.png" />
+					</div>
+					<div class="rew_name">首次提现</div>
+					<div class="jl_term">
+						<div>奖励</div>
+						<div class="blueFont"><b>1.5</b>元</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div [style.display]='item==1?"block":"none"' class="friend_list">
+			<div class="ul_list">
+				<ul>
+					<li class="ul_li grayBottom" *ngFor="let item of dataList">
+						<div class="list_info">
+							<div class="touxiang fl_left"><img [src]="item.UserImg" /></div>
+							<div class="friend_name fl_left">{{item.NickName}}</div>
+							<div class="friend_phone" style="opacity: 0;">户余额<span class="red">{{item.OutMoney}}</span>英币</div>
+						</div>
+					</li>
+				</ul>
+				<div [style.display]='isShowNoFriend?"block":"none"' class="fontSize" style="text-align: center;min-height: 20vh;line-height: 20vh;color: grey;">
+					暂无好友！赶紧邀请好友赚大红包
+				</div>	
+			</div>
+		</div>
+		<div class="split"></div>
+		<div class="condition">
+			<div class="con_img"><img src="assets/img/rew_rules.png" /></div>
+			<div class="rew_rules"><b>奖励方法条件</b></div>
+			<div class="con_ul">
+				<ul>
+					<li>1、任意徒弟首次登录该师傅获得奖励</li>
+					<li>2、任意徒弟签到一天该师傅获得奖励</li>
+					<li>3、任意徒弟签到三天该师傅获得奖励</li>
+					<li>4、任意徒弟首次提现该师傅获得奖励</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer_btn blue">
+			<a (click)="showShare()" id=""><b class="allFont">快去收徒吧~</b></a>
+		</div>
+	</div>
+</div>
+<div class="shaerMo" [style.display]="!isShowShare?'none':block">
+  <div class="shareItem allBg">
+    <h2>分享到</h2>
+    <ul>
+      <li (click)="showShare()">
+        <a id="weixinF">
+          <img src="assets/img/weixin1.png" alt="">
+        </a>
+        
+      </li>
+      <li (click)="showShare()">
+        <a id="pengyou">
+          <img src="assets/img/weixinF.png" alt="">
+        </a>
+        
+      </li>
+      
+	  <li (click)="showShareImg()">
+          <a id="showShareImg">
+            <img src="assets/img/facing.png" alt="">
+          </a>
+	  </li>
+	  <li (click)="showShare()">
+		<a id="xitong">
+		  <img src="assets/img/shareMore.png" alt="">
+		</a>
+	</li>
+    </ul>
+  </div>
+</div>
+<div class="showInviteQc" id="showInviteQc" (click)="toggleQcImg()">
+	<div>
+		<div>
+			<img [src]="showShareImgUrl" alt="图片加载中...">
+				<!--  <p >温馨提示：如果您的收徒二维码被屏蔽，请点击图片刷新二维码然后分享</p> -->
+		</div>
+		
+	</div>
+</div>
+<app-footnav></app-footnav>

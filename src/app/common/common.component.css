@@ -1,0 +1,31 @@
+.am-container {
+  width: 96%;
+  margin: 0 auto;
+  margin-bottom: 44px;
+  margin-top: 44px;
+}
+.am-comment-main {
+  margin-left: 0 ;
+}
+.am-comment {
+  margin: 0.3rem;
+}
+.tixianBtn {
+  width: 100%;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.tixianBtn span {
+  display: inline-block;
+  width: 60%;
+  text-align: center;
+  background: -webkit-gradient(linear, 0 0, 100% 100%, from(#fd9e4b), to(#ec4036));
+  background: -webkit-linear-gradient(to top left, #fd9e4b, #ec4036);
+  background: -moz-linear-gradient(to top left, #fd9e4b, #ec4036);
+  background: -o-linear-gradient(to top left, #fd9e4b, #ec4036);
+  background: linear-gradient(to top left, #fd9e4b, #ec4036);
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 8px;
+}

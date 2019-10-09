@@ -1,0 +1,150 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    // background: url(../../assets/img/loginTop.png) no-repeat;
+    // background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right,#57b0d0 30%,#65a2da 50%,#6c95ea 80%);
+    .logo_img{
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        top: 4rem;
+        bottom: 0;
+        left: 9;
+        left: 6.5rem;
+        right: 0;
+        box-shadow: 0rem 0rem 0.8rem #6c95ea;
+        img{
+            width: 100%;
+        }
+    }
+    .loginTab{
+        width: 100%;
+        height: auto;
+        // background: #fff;
+        // border-radius: 15px;
+        // margin: 9.4rem auto 0 auto;
+        // box-shadow: 12px 12px 0px rgba(251, 251,251,0.5);
+        position: relative;
+        .loginItem{
+            width:85%;
+            margin: 0 auto;
+            position: absolute;
+            top: 10rem;
+            left: 8%;
+            .label-item{
+                width:100%;
+                // background: #ebeaf1;
+                border-bottom: 1px solid #fff;
+                height: 1.9rem;
+                line-height:1.9rem;
+                margin-bottom:1rem;
+                // label{
+                //     background: #e7e6ed;
+                //     display: inline-block;
+                //     float: left;
+                //     line-height: 0;
+                //     i{
+                //         display: inline-block;
+                //         width: 1.9rem;
+                //         height: 1.9rem;
+                //         background: url(../../assets/img/userIcon.png) no-repeat;
+                //         background-size:100% 100%;
+
+                //     }
+                //     .pass{
+                //         background: url(../../assets/img/passIcon.png) no-repeat;
+                //         background-size:100% 100%; 
+                //     }
+                // }
+                .codeBtn{
+                    float: right;
+                    width: 42%;
+                    padding-left: 0.3rem;
+                    button{
+                        width: 100%;
+                        height: 1.5rem;
+                        border: none;
+                        font-size: 0.5rem;
+                        line-height: 1.5rem;
+                        color: #6b97e7;
+                        letter-spacing: 0.1rem;
+                    }
+                }
+                input{
+                    float: left;
+                    border: none;
+                    background:transparent;
+                    width: 52%;
+                    outline: none;
+                    font-size: 0.7rem;
+                }
+                ::-webkit-input-placeholder { /* WebKit browsers */
+                    color:    #fff;
+                }
+                :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                    color:    #fff;
+                }
+                ::-moz-placeholder { /* Mozilla Firefox 19+ */
+                    color:    #fff;
+                }
+                :-ms-input-placeholder { /* Internet Explorer 10+ */
+                    color:    #fff;
+                }
+                .code{
+                    width: 57%;
+                    float: left;
+                    padding-left: 0.3rem;
+                    
+                }
+            }
+
+        }
+        .regBtn{
+            width: 80%;
+            // height: 1.95rem;
+            margin: 0 auto;
+            text-align: center;
+            // background: url(../../assets/img/reg.png) no-repeat;
+            // background-size: 100% 100%;
+            border-radius: 2rem;
+            color: #6c95ea;
+            input{
+                width: 80%;
+                height: 1.8rem;
+                border: none;
+                background: none;
+                outline: none;
+                letter-spacing: 0.2rem;
+                font-size: 0.85rem;
+            }
+        }
+        .quLogin{
+            text-align: center;
+            padding-top: 0.5rem;
+            font-size: .55rem;
+            letter-spacing: 0.1rem;
+            a{
+            font-size: 0.65rem;
+            text-decoration: underline;
+            }
+        }
+        
+    }
+    .outher{
+        margin-top:0.9rem;
+        .outherItem{
+            text-align: center;
+            width: 100%;
+            i{
+                display: inline-block;
+                width: 2.15rem;
+                height:1.85rem;
+                background: url(../../assets/img/weixinIcon.png) no-repeat;
+                background-size:100% 100%;
+            }    
+        }
+    }
+}

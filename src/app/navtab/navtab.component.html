@@ -1,0 +1,12 @@
+<nav class="navTab blue">
+	<ul class="navTabCon">
+		<li *ngFor="let item of navDataList,let i = index"  routerLinkActive="active">
+			<a (click)="createComponent(item.Id)" routerLink="/navtab" [queryParams]="{id:item.Id}" class="allFont">
+				<span>{{item.Name}}</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+<router-outlet #newsContent></router-outlet>
+<app-newslist #newsListCon [hidden]="!noShowCon"></app-newslist>
+

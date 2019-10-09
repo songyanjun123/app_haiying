@@ -1,0 +1,301 @@
+.am-container {
+    width: 100%;
+    .btn_invite{
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        top: 8.5rem;
+        bottom: 0;
+        left:0;
+        right: 0;
+        text-align: center;
+        height: 2rem;
+        p{
+            background: #fffc00;
+            border-radius: 2rem;
+            text-align: center;
+            line-height: 2rem;
+            width: 10rem;
+            font-size: 0.9rem;
+            color: #fc5e1f;
+            letter-spacing: 0.1rem;
+            font-weight: bold;
+            display: inline-block;      
+            -webkit-animation:myfirst 1s;//绑定动画名 
+            -webkit-animation-iteration-count:infinite;//规定动画播放无循坏(永远)    
+        }
+    }
+
+    @-webkit-keyframes myfirst {
+        0% {
+            width: 10rem;
+        }
+        50% {
+            width: 8rem;
+            line-height: 1.5rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        100%{
+            width: 10rem;
+        }
+    }
+
+    .friend_count{
+        width: 100%;
+        // border:1px solid #000;
+        text-align: center;
+        font-size: 0.7rem;
+        position: relative;
+        top:-1.5rem;
+        margin: 0 auto;
+        line-height: 2rem;
+        .myMon_count{
+            display:inline-block;
+            margin-left: 1rem;
+        }
+    }
+    .box_select{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        .sel_title{
+            .box_title{
+                width: 100%;
+                border-bottom: 1px solid #d4cece;
+                .con_title{
+                    display: flex;
+                    font-size: 0.75rem;
+                    >b{
+                        flex: 1;
+                        text-align: center;
+                        padding-bottom: 0.3rem;
+                    }
+                }
+            }
+        }
+        .b_notes_cont{
+            width: 100%;
+            p{
+                text-align: center;
+                font-weight: bold;
+                font-size: 0.75rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .box_reward{
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+                .rew{
+                    width: 40%;
+                    position:relative;
+                    margin-left: 1rem;
+                    display: inline-block;
+                    .rew_img{
+                        width: 70%;
+                        margin: 0 auto;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .rew_name{
+                        width: 100%;
+                        margin: 0 auto;
+                        position:absolute;
+                        left:0;
+                        top:0rem;
+                        z-index: 2;
+                        font-size: 0.7rem;
+                        color: #fff;
+                        text-align: center;
+                        letter-spacing: 0.1rem;
+                        line-height: 1.5rem;
+                    }
+                   .jl_term{
+                       width: 100%;
+                       font-size: 0.7rem;
+                       padding: 1rem 1rem;
+                       div:nth-child(1){
+                        writing-mode: tb-rl;
+                        letter-spacing: 0.5rem;
+                        font-weight: bold;
+                       }
+                       div:nth-child(2){
+                        width: 100%;
+                        position: absolute;
+                        top: 2.2rem;
+                        left: 2.5rem;
+                        letter-spacing: 0.1rem;
+                        b{
+                            font-size: 1.4rem;
+                        }
+                       }
+                   }
+                }
+            }
+        }   
+        .friend_list{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            .ul_list{
+                width: 100%;
+                .ul_li{
+                    .list_info{
+                        width: 90%;
+                        margin: 0.5rem auto;
+                        .touxiang{
+                            width: 12%;
+                            display: inherit;
+                            margin-right: 1rem;
+                            margin-left: 1rem;
+                            img{
+                                width: 100%;
+                                border-radius: 50%;
+                            }
+                        }
+                        .friend_name{
+                            font-size: 0.7rem;
+                            font-weight: bold;
+                            display: inherit;
+                            line-height: 2rem;
+                            margin-right: 1rem;
+                        }
+                        .friend_phone{
+                            font-size: 0.7rem;
+                            font-weight: bold;
+                            display: inherit;
+                            line-height: 2rem;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .condition{
+            text-align: center;
+            line-height: 1.2rem;
+            position:relative;
+            .con_img{
+                width: 65%;
+                margin: 0 auto;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+               img{
+                   width: 100%;
+               }
+            }
+            .rew_rules{
+                width: 100%;
+                position:absolute;
+                left:0;
+                top:0.2rem;
+                z-index: 2;
+                font-size: 0.75rem;
+                margin: 0 auto;
+            }
+            .con_ul{
+                font-size: 0.2rem;
+                color: #7f7e7e;
+            }
+        }
+        .footer_btn{
+            width: 40%;
+            border-radius: 0.2rem;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 3rem;
+            b{
+                text-align: center;
+                font-size: 0.75rem;
+                font-weight: bold;
+                padding: 0.2rem 0.2rem;
+                letter-spacing: 0.1rem;
+                display: inline-block;
+            }
+        }
+    }
+}
+.shaerMo{
+    position: fixed;
+    top: -44px;
+    left: 0;
+    width: 100%;
+    height:100vh;
+    z-index: 99999999;
+    background: rgba(0,0,0,.5);
+    .shareItem{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        width: 100%;
+        height: 6rem;
+        h2{
+            font-size: 1rem;
+            text-align: center;
+            // padding-top: 0.4rem;
+            line-height: 2.6rem;
+        }
+        ul{
+            display: flex;
+            margin: 0;
+            li{
+                display: inline-block;
+                flex: 1;
+                text-align: center;
+                img{
+                    width: 1.8rem;
+                    height: 1.8rem;
+
+                }
+            }
+        }
+
+    }
+}
+.showInviteQc{
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    >div {
+        position: relative;
+            width: 100%;
+            height: 100%;
+        >div{
+            width: 80%;
+            height: 23rem;
+            background: url(../../assets/img/inviteQcBg.png) no-repeat;
+            background-size:100% 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto; 
+            p{
+                color: #fff;
+                padding: 10px;
+                padding-top: 5rem;
+            }
+            img{
+                position: absolute;
+                width: 87px;
+                height: 87px;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                border-radius: 9px;
+            }
+        }
+        
+    }
+}

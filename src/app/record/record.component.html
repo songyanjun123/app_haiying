@@ -1,0 +1,22 @@
+<header class="am-titlebar-cols">
+	<a routerLink="/usermoney" class="icon-cheveron-left"></a>
+	<h2 class="am-titlebar-title">提现记录</h2>
+</header>
+<div class="am-container">
+	<ul class="am-list am-list-static am-list-border">
+		<li class="allBg" *ngFor="let item of nullArr">
+			<div>
+				<h2>
+					{{item.RealName}}<span>{{item.IdNumber}}</span>
+				</h2>
+				<h2>
+					{{item.StateDesc}}<span class="red">{{item.CashCount}}英币</span>
+				</h2>
+
+			</div>
+			<div class="clear"></div>
+			<p>{{item.ProcessDate | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+		</li>
+	</ul>
+	<div class="tixianBtn fontSize"><span (click)="getMore()">点击加载更多</span></div>
+</div>

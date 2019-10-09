@@ -1,0 +1,22 @@
+<header class="am-titlebar-cols">
+	<a routerLink="/my-center" class="icon-cheveron-left"></a>
+	<h2 class="am-titlebar-title">浏览记录</h2>
+</header>
+<div class="am-container">
+	<ul class="am-list">
+	  <li *ngFor='let item of nullArr'>
+	  	<a>
+	  		<div class="am_list_imgs">
+	  			<h3 class="am_title">{{item.ArticleTitle}}</h3>
+	  			<div class="am_img">
+	  				<img [src]="item.ArticleImg"/>
+	  			</div>
+	  		</div>
+	  		<p class="am_list_time">{{item.CreateDate | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+	  	</a>
+	  </li>
+	  
+	</ul>
+	
+	<div class="tixianBtn fontSize"><span _ngcontent-c6="" (click)="getMore()">点击加载更多</span></div>
+</div>

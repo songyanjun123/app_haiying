@@ -1,0 +1,47 @@
+.am-container{
+    margin-top: 44px;
+    
+}
+.invite_btn {
+    width: 100%;
+    height: 4rem;
+    margin: 0 auto;
+    display: flex;
+}
+    
+.divContent{
+    padding: 10px;
+    h4{
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+.dibu{
+    width: 100%;
+    
+    position: fixed;
+    bottom:0;
+    left: 0;
+    h2{
+        text-align: center;
+    }
+}
+.invite_btn a {
+    display: inline-block;
+    flex: 1;
+}
+.invite_btn a:first-child,.invite_btn a:last-child {
+    background: url(../../assets/img/invite_split.png) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+.invite_btn a:nth-child(2) {
+    background: url(../../assets/img/weixin.png) no-repeat;
+    background-size: contain;
+}
+.invite_btn a:nth-child(3) {
+    background: url(../../assets/img/circle.png) no-repeat;
+    background-size: contain;
+}

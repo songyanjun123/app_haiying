@@ -1,0 +1,257 @@
+<div class="container allBg"> 
+	<!-- <input type="text" [value]='testInput' style="width:100%;height:2rem;border:1px solid red;position:fixed;top:50px;left:0;z-index: 9999;background: #fff"> -->
+	<ul class="table-cell allBg" #tableCell>
+		<li class="table-cell-item meta-item" *ngFor="let item of nullArr,let i = index">
+			<a [routerLink]="['/newsdetail', item.Id]" *ngIf="item.IsAd == 0">
+				<div class="meta-body">
+					<div class="media-body_title">
+						<h4>{{item.Title}}</h4>
+					</div>
+					<div class="media-body_img">
+						<img [src]="item.TitleImg" />
+					</div>
+				</div>
+				<!-- <p class="meta-info"></p> -->
+				<div class="clear"></div>
+				<p class="rightPri">
+					<span class="auth ">{{item.Auth}}</span>
+					<span class="time">{{item.OpenCount}}阅读&nbsp;&nbsp;&nbsp;{{item.CreateDateDesc}}</span>
+					<span class="price blueFont">{{item.Price}}/阅读</span>
+				</p>
+				<div class="clear"></div>
+			</a> 
+			<a [routerLink]="['/addetail', item.Id]"  *ngIf="item.IsAd == 1">
+				<div class="meta-body">
+					<div class="media-body_title">
+						<h4>{{item.Title}}&nbsp;&nbsp;</h4>
+					</div>
+					<div class="media-body_img">
+						<img [src]="item.TitleImg" />
+					</div>
+				</div>
+				<!-- <p class="meta-info"></p> -->
+				<div class="clear"></div>
+				<p class="rightPri">
+					<span class="red-border">{{item.Auth}}</span><span class="read" style="padding-left:0.5rem">{{item.OpenCount}}阅读</span><span class="price blueFont">{{item.Price}}/阅读</span>
+				</p>
+				<div class="clear"></div>
+			</a>
+		</li>
+	</ul>
+</div>
+<app-footnav></app-footnav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<ul class="table-cell">
+		<li class="table-cell-item meta-item">
+			<a>
+				<div class="meta-body">
+					<div class="media-body_img">
+						<img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+					</div>
+					<div class="media-body_title">
+						<h4>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h4>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</a>
+			<p class="meta-info">
+				<span class="auth ">健康养生</span>
+				<span class="read">123阅读</span>
+				<span class="time">15分钟前</span>
+				<span class="price">每阅读8毛</span>
+			</p>
+		</li>
+		<li class="table-cell-item meta-item">
+			<a>
+				<div class="meta-body">
+					<div class="media-body_img">
+						<img src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+					</div>
+					<div class="media-body_title">
+						<h4>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h4>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</a>
+			<p class="meta-info">
+				<span class="auth red-border">健康养生</span>
+				<span class="read">123阅读</span>
+				<span class="price">每阅读8毛</span>
+			</p>
+		</li>
+		<li class="table-cell-item meta-item">
+			<a>
+				<div class="meta-body">
+					<div class="media-body_imgs_box">
+						<div class="media-body_img media-body_imgs">
+							<img class="" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+						<div class="media-body_img media-body_imgs">
+							<img class=" " src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+						<div class="media-body_img media-body_imgs">
+							<img class="" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+					</div>
+					<div class="media-body_imgs_title">
+						<h4>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h4>
+					</div>
+				</div>
+			</a>
+			<p class="meta-info">
+				<span class="auth">健康养生</span>
+				<span class="read">123阅读</span>
+				<span class="time">15分钟前</span>
+				<span class="price">每阅读8毛</span>
+			</p>
+		</li>
+		<li class="table-cell-item meta-item">
+			<a>
+				<div class="meta-body">
+					<div class="media-body_imgs_box">
+						<div class="media-body_img media-body_imgs">
+							<img class="" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+						<div class="media-body_img media-body_imgs">
+							<img class=" " src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+						<div class="media-body_img media-body_imgs">
+							<img class="" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+					</div>
+					<div class="media-body_imgs_title">
+						<h4>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h4>
+					</div>
+				</div>
+			</a>
+			<p class="meta-info">
+				<span class="auth">健康养生</span>
+				<span class="read">123阅读</span>
+				<span class="time">15分钟前</span>
+				<span class="price">每阅读8毛</span>
+			</p>
+		</li>
+		<li class="table-cell-item meta-item">
+			<a>
+				<div class="meta-body">
+					<div class="media-body_imgs_box">
+						<div class="media-body_img media-body_imgs">
+							<img class="" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+						<div class="media-body_img media-body_imgs">
+							<img class=" " src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+						<div class="media-body_img media-body_imgs">
+							<img class="" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+					</div>
+					<div class="media-body_imgs_title">
+						<h4>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h4>
+					</div>
+				</div>
+			</a>
+			<p class="meta-info">
+				<span class="auth">健康养生</span>
+				<span class="read">123阅读</span>
+				<span class="time">15分钟前</span>
+				<span class="price">每阅读8毛</span>
+			</p>
+		</li>
+		<li class="table-cell-item meta-item">
+			<a>
+				<div class="meta-body">
+					<div class="media-body_imgs_box">
+						<div class="media-body_img media-body_imgs">
+							<img class="" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+						<div class="media-body_img media-body_imgs">
+							<img class=" " src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+						<div class="media-body_img media-body_imgs">
+							<img class="" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+					</div>
+					<div class="media-body_imgs_title">
+						<h4>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h4>
+					</div>
+				</div>
+			</a>
+			<p class="meta-info">
+				<span class="auth">健康养生</span>
+				<span class="read">123阅读</span>
+				<span class="time">15分钟前</span>
+				<span class="price">每阅读8毛</span>
+			</p>
+		</li>
+		<li class="table-cell-item meta-item">
+			<a>
+				<div class="meta-body">
+					<div class="media-body_imgs_box">
+						<div class="media-body_img media-body_imgs">
+							<img class="" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+						<div class="media-body_img media-body_imgs">
+							<img class=" " src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+						<div class="media-body_img media-body_imgs">
+							<img class="" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+					</div>
+					<div class="media-body_imgs_title">
+						<h4>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h4>
+					</div>
+				</div>
+			</a>
+			<p class="meta-info">
+				<span class="auth">健康养生</span>
+				<span class="read">123阅读</span>
+				<span class="time">15分钟前</span>
+				<span class="price">每阅读8毛</span>
+			</p>
+		</li>
+		<li class="table-cell-item meta-item">
+			<a>
+				<div class="meta-body">
+					<div class="media-body_imgs_box">
+						<div class="media-body_img media-body_imgs">
+							<img class="" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+						<div class="media-body_img media-body_imgs">
+							<img class=" " src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+						<div class="media-body_img media-body_imgs">
+							<img class="" src="https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2496574212,3809584404&fm=173&app=49&f=JPEG?w=218&h=146&s=7AB2CC4F5A286D3EDA3C853A03000043"/>
+						</div>
+					</div>
+					<div class="media-body_imgs_title">
+						<h4>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h4>
+					</div>
+				</div>
+			</a>
+			<p class="meta-info">
+				<span class="auth">健康养生</span>
+				<span class="read">123阅读</span>
+				<span class="time">15分钟前</span>
+				<span class="price">每阅读8毛</span>
+			</p>
+		</li>
+	</ul>-->

@@ -1,0 +1,24 @@
+<header class="am-titlebar-cols">
+	<a routerLink="/usermoney" class="icon-cheveron-left"></a>
+	<h2 class="am-titlebar-title">收益明细</h2>
+</header>
+<div class="am-container">
+	<!-- <section class="am-panel am-panel-default" *ngFor='let item of nullArr'>
+		<header class="am-panel-hd">
+			<h3 class="am-panel-title">{{item.CreateDate | date:'yyyy-MM-dd HH:mm:ss'}}<span class="am-badge am-badge-success"
+				 style="float: right;">+{{item.PayCount}}</span></h3>
+		</header>
+		<div class="am-panel-bd">{{item.Title}}</div>
+	</section>
+	<div class="tixianBtn"><span _ngcontent-c6="" (click)="getMore()">加载更多</span></div> -->
+
+	<ul class="list-item">
+		<li *ngFor='let item of nullArr'>
+			<div>
+				<h3>{{item.Title}}</h3>
+			</div>
+			<h3 class="am-panel-title">{{item.CreateDate | date:'yyyy-MM-dd HH:mm:ss'}}<span class="red" style="float: right;margin-right: 0.5rem;font-size: 0.75rem;">+{{item.PayCount}}<img style="width:0.9rem;height:0.9rem" src="../../assets/img/ybIcon.png" alt=""></span></h3>
+		</li>
+	</ul>	
+	<div class="tixianBtn fontSize"><span (click)="getMore()">点击加载更多</span></div>
+</div>

@@ -1,0 +1,35 @@
+.am-navbar {
+  padding: 0;
+  width: 100%;
+  background: #f1f1f1;
+}
+.am-navbar > ul {
+  width: 100%;
+  display: flex;
+  border-top: 1px solid #ccc;
+  background: #f1f1f1;
+  margin: 0;
+}
+.am-navbar > ul li {
+  flex: 1;
+  text-align: center;
+}
+.am-navbar > ul li a {
+  text-decoration: none;
+  font-size: 0.75rem;
+  color: #666;
+}
+.am-navbar > ul li a .icon-user-add-outline {
+  font-size: 1rem;
+}
+.am-navbar > ul li a span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.am-navbar > ul li .active {
+  font-size: 2rem;
+}
+.am-navbar > ul li .active span {
+  color: red;
+}

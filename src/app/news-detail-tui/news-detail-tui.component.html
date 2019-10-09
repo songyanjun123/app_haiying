@@ -1,0 +1,131 @@
+<header class="am-titlebar-cols">
+	<a routerLink="/navtab" class="icon-cheveron-left"></a>
+</header>
+
+<div class="am-container">
+  <article class="am-article"> 
+      <div class="title">
+        <h2>{{title}}</h2>
+      </div>
+      <div class="auth">
+          <span class="blueFont">作者：{{auth}}&nbsp;&nbsp;</span>
+
+          <span>{{createDate}}</span>
+      </div>
+      <div class="clear"></div>
+      <div class="showContent" id="all">
+        <div class="content" [innerHTML] = "content"></div>
+        <p style="font-size:0.5rem;color:#7b7a7a">本内容均为自媒体用户上传，不代表平台观点。</p>
+        <p style="font-size:0.5rem;color:#7b7a7a">如有侵权，请联系我们立即删除。</p>
+        <div class="invite_btn">
+          <a><span></span></a>
+          <a id="weixinA"><span></span></a>
+          <a id="pengyouA"><span></span></a>
+          <a><span></span></a>
+        </div>
+        <h3 style="width: 100%;text-align: center;font-weight: bold;font-size: 0.75rem">感觉可以，动动小手转发给亲朋好友一起看！</h3>
+      </div>
+      
+      <div class="btn">
+        <button (click)="openAll()" id="allBtn" class="blueBorder allBg blueFont"><b>点击打开阅读全文</b></button>
+        <div class="jiantou_icon" id="jiantou"><img src="assets/img/jaintou_icon.gif"></div>
+      </div>
+  </article>
+  <div class="split"></div>
+  <!-- 推荐 -->
+  <div class="container allBg">
+    <p class="tui">相关推荐</p>
+    <ul class="table-cell">
+      <li class="table-cell-item meta-item" *ngFor="let item of nullArr,let i = index">
+          <div *ngIf='item.IsAd==1'>
+              <a [routerLink]="['/addetail', item.Id]">
+                <div class="meta-body">
+                  <div class="media-body_title">
+                    <h4>{{item.Title}}</h4>
+                  </div>
+                  <div class="media-body_img">
+                    <img [src]="item.TitleImg" />
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </a> 
+            </div>
+            <div *ngIf='item.IsAd==0'>
+                <a [routerLink]="['/newsdetailtui', item.Id]">
+                  <div class="meta-body">
+                    <div class="media-body_title">
+                      <h4>{{item.Title}}</h4>
+                    </div>
+                    <div class="media-body_img">
+                      <img [src]="item.TitleImg" />
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </a> 
+            </div>
+      </li>
+    </ul>
+  </div>
+  <div class="split"></div>
+  <div class="userCommon">
+    <h3 class="commonTitle blue allFont">大神评论区</h3>
+    <div class="nullCom fontSize" [style.display]="isShowNoCom==0?'block':'none'">
+      暂无评论,神评等着你
+    </div>
+    <ul>
+        <li *ngFor="let item of commonList">
+          <div>
+              <div class="userImg">
+                <img [src]="item.UserImg" alt="暂无图片">
+              </div>
+              <div class="userCom">
+                <p>
+                  <span>{{item.NickName}}</span>
+                  <span class="fontSize">{{item.CreateDate | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+                </p>
+                <h3>{{item.UserComment}}</h3>
+              </div>
+              <div class="clear"></div>
+          </div>
+        </li>
+    </ul>
+  </div>
+  <div class="userAddCom allBg">
+    <div class="input fontSize">
+      <input type="text" placeholder="我来说两句..." id="txtcomment" #txtComment name="txtComment">
+    </div>
+    <div class="icon">
+      <span (click)="addCom()"></span>
+      <span (click)="addfov()"></span>
+      <span (click)="showShare()"></span>
+    </div>
+  </div>
+</div>
+
+<div class="shaerMo" [style.display]="!isShowShare?'none':block">
+  <div class="shareItem allBg">
+    <h2>分享到</h2>
+    <ul>
+      <li (click)="showShare()">
+        <a id="weixinF">
+          <img src="assets/img/weixin1.png" alt="">
+        </a>
+        
+      </li>
+      <li (click)="showShare()">
+        <a id="pengyou">
+          <img src="assets/img/weixinF.png" alt="">
+        </a>
+        
+      </li>
+      <li (click)="showShare()">
+          <a id="xitong">
+            <img src="assets/img/shareMore.png" alt="">
+          </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+

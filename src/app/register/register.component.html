@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="logo_img"><img src="assets/img/logo.png"/></div>
+  <div class="loginTab">
+    <div class="loginItem">
+      <div class="label-item">
+        <!-- <label>
+          <i class="username"></i>
+        </label> -->
+        <input type="text" id="userName" placeholder="请输入手机号">
+      </div>
+      <div class="clear"></div>
+      <div class="label-item">
+        <!-- <label>
+          <i class="pass"></i>
+        </label> -->
+        <input type="password" id="passWord" placeholder="请输入密码">
+      </div>
+      <div class="clear"></div>
+      <div class="label-item">
+        <label>
+          <i class="pass"></i>
+        </label>
+        <input type="password" id="regPassWord" class="allFont" placeholder="请再次输入密码">
+      </div>
+      <div class="clear"></div>
+      <div class="label-item">
+        <input type="text" class="code" id="code" class="allFont" placeholder="请输入验证码">
+        <label class="codeBtn">
+          <button (click)="getCode()" class="allBg" id="getCode">获取验证码</button>
+        </label>
+      </div>
+      <div class="clear"></div>
+      <div class="regBtn allBg">
+        <input type="submit" (click)="reg()" value="注册 " class="regSubmit">
+      </div>
+      <p class="quLogin">
+        已有账号？<a routerLink = 'login' class="allFont">立即登录</a>
+      </p>
+    </div>
+  </div>
+  <!-- <div class="outher">
+    <img src="assets/img/outher.png" alt="">
+    <div class="outherItem">
+      <i class="weixin"></i>
+    </div>
+</div> -->
+</div>

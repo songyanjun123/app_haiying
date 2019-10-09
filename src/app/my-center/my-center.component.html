@@ -1,0 +1,70 @@
+<div class="am-container"> 
+	
+	
+	<!-- 退出登陆 -->
+	<!-- <img src="assets/img/logout.png" id="logou" (click)='logout()'/> -->
+	<div class="userImg">
+		<img [src]="userImg" class="user_img" [title]="userImg"/>
+		<h2 class="user_title">{{nickName}}</h2>
+		<p class="user_name">{{userName}}</p>
+	</div>
+	<div class="user_money_info allBg">
+		<ul class="user_money_items">
+			<li>
+				<p class="blue allFont">今日获得英币</p>
+				<span class="blueFont">{{DayMoney}}</span>
+			</li>
+			<li>
+				<p class="blue allFont">账户余额</p>
+				<span class="blueFont">{{Money}}</span>
+			</li>
+		</ul>
+	</div>
+
+	<div class="split"></div>
+	<div class="box_med">
+		<ul class="media_list allBg">
+			<li class="list_item" routerLink="/usermoney">
+				<a>
+					<i class="list-item-icon tixian"></i><span>我的钱包</span>
+				</a>
+			</li>
+			<!-- <li class="list_item" routerLink="/record">
+				<a >
+					<i class="list-item-icon record"></i><span>提现记录</span>
+				</a>
+			</li> -->
+			<!-- <li class="list_item" routerLink="/profit">
+				<a >
+					<i class="list-item-icon Profit"></i><span>收益来源</span>
+				</a>
+			</li> -->
+			<li class="list_item" routerLink="/histroy">
+				<a >
+					<i class="list-item-icon histroy"></i><span>我的浏览</span>
+				</a>
+			</li>
+			<li class="list_item" routerLink="/fov">
+				<a >
+					<i class="list-item-icon fov"></i><span>我的收藏</span>
+				</a>
+			</li>
+			<li class="list_item" routerLink="/problem">
+				<a >
+					<i class="list-item-icon problem"></i><span>常见问题</span>
+				</a>
+			</li>
+			<li class="list_item" routerLink="/common">
+				<a >
+					<i class="list-item-icon common"></i><span>我的评论</span>
+				</a>
+			</li>
+			<li class="list_item" routerLink="/about">
+				<a >
+					<i class="list-item-icon about"></i><span>关于我们</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<app-footnav></app-footnav>

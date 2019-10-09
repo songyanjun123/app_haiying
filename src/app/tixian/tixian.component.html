@@ -1,0 +1,61 @@
+<header class="am-titlebar-cols">
+	<a routerLink="/usermoney" class="icon-cheveron-left"></a>
+	<h2 class="am-titlebar-title">我要提现</h2>
+</header>
+<div class="am-container">
+	<div class="am-items">
+		<div class="item blueBorder">
+			<div class="am-form-group">
+				<label class="blueFont">真实姓名</label>
+				<input type="text" id="userNickName" class="blueFont" placeholder="请输入您的真实姓名">
+			</div>
+			<div class="am-form-group">
+				<label class="blueFont">微信账号</label>
+				<input type="text" class="blueFont" id="userWxName" placeholder="请输入您的微信号">
+			</div>
+		</div>
+
+		<div class="item blueBorder">
+
+
+			<div class="am-group">
+				<ul>
+					<li [ngClass]="item==0?'blue allFont':'blueBorder'" data-val='5' (click)="clickMoney(5,0)">
+						5元 <br />500糖币
+					</li>
+					<li [ngClass]="item == 1 ? 'blue allFont':'blueBorder'" data-val='10' (click)="clickMoney(10,1)">
+						10元 <br />1000糖币
+					</li>
+					<li [ngClass]="item==2?'blue allFont':'blueBorder'" data-val='30' (click)="clickMoney(30,2)">
+						30元 <br />3000糖币
+					</li>
+					<li [ngClass]="item==3?'blue allFont':'blueBorder'" data-val='50' (click)="clickMoney(50,3)">
+						50元 <br />5000糖币
+					</li>
+					<li [ngClass]="item==4?'blue allFont':'blueBorder'" data-val='100' (click)="clickMoney(100,4)">
+						100元 <br />10000糖币
+					</li>
+					<li [ngClass]="item==5?'blue allFont':'blueBorder'" data-val='200' (click)="clickMoney(200,5)">
+						200元 <br />20000糖币
+					</li>
+				</ul>
+				<div class="tixianBtn">
+					<span (click)="submitMoney()" class="blue allFont">立即提现</span>
+				</div>
+			</div>
+		</div>
+		<div class="tixianTip">
+			您的申请大概在1-3个工作日内完成审核到账（节假日顺延），请确保您的账户已经实名认证，否者不能体现。
+		</div>
+		<div class="tixianTip" style="padding-top: 0.6rem;">
+			1.18点之前提现，当日到账，否则次日到账。
+		</div>
+		<div class="tixianTip" style="padding-top: 0.6rem;">
+			2.第一次体现请添加官方微信号：<span>zysj138</span>	
+		</div>
+		<div class="tixianTip" style="padding-top: 0.6rem;">
+			3.官方：<span>客服QQ：3219305943</span>	
+		</div>
+		
+	</div>
+</div>

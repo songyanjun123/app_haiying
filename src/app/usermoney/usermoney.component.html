@@ -1,0 +1,51 @@
+<header class="am-titlebar-cols">
+  <a routerLink="/my-center" class="icon-cheveron-left"></a>
+  <h2 class="am-titlebar-title">我的钱包</h2>
+</header>
+<div class="am-container">
+  <div class="userInfo blue">
+    <div class="topImg">
+      <img [src]="userImg" alt="">
+    </div>
+    <div class="userMoneyInfo">
+      <p>
+        <span class="allFont">今日英币：{{DayMoney}}</span>
+      </p>
+      <p>
+        <span class="allFont">可兑换：{{Money}}</span>
+      </p>
+    </div>
+  </div>
+  <div>
+      <ul class="media_list allBg">
+        <li class="list_item" routerLink="/tixian">
+          <a>
+            <i class="list-item-icon tixian"></i><span>我要提现</span><em class="icon-cheveron-right"></em>
+          </a>
+        </li>
+        <li class="list_item" routerLink="/record">
+          <a >
+            <i class="list-item-icon witrou"></i><span>提现记录</span><em class="icon-cheveron-right"></em>
+          </a>
+        </li>
+        <li class="list_item" routerLink="/profit">
+          <a >
+            <i class="list-item-icon detailed"></i><span>收益来源</span><em class="icon-cheveron-right"></em>
+          </a>
+        </li>
+        <li class="list_item" (click)="formulaShow()">
+          <a >
+            <i class="list-item-icon formula"></i><span>提现公式</span><em class="icon-cheveron-right"></em>
+          </a>
+          <div class="draw-dowm" [hidden]="!formula">
+            <p>当前兑换公式为<span class="red"><b>100英币=1元</b></span></p>
+          </div>
+        </li>
+        <li class="list_item" routerLink="/rule">
+          <a >
+            <i class="list-item-icon rule"></i><span>规则说明</span><em class="icon-cheveron-right"></em>
+          </a>
+        </li>
+      </ul>
+    </div>
+</div>

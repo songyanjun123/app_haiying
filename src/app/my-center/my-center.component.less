@@ -1,0 +1,184 @@
+.split{
+    width: 100%;
+    height: 5px;
+    background: #ebebeb;
+}
+#logou{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+}
+.userImg{
+    width: 100%;
+    height: 9.25rem;
+    background: url(../../assets/img/myCenterTop.png) no-repeat;
+    background-size: 100% 100% ;
+    padding: 2.3rem 1.3rem;
+    .user_img{
+        width: 3.1rem;
+        height: 3.1rem;
+        border-radius: 50%;
+        float: left;
+    }
+    .user_title,.user_name{
+        display: inline-block;
+        width: 60%;
+        float: left;
+        color: #fff;
+        padding-left: 0.5rem;
+        
+    }
+    .user_title{
+        font-size: 1rem;
+    }
+    .user_name{
+        font-size: .7rem;
+    }
+}
+
+.am-container{
+    background: #f2f2f2;
+    min-height: 100vh;
+}
+/*.user_money_info{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    .user_money_items{
+        display: flex;
+        margin-bottom: 0;
+        li{
+            text-align: center;
+            float: left;
+            flex: 1;
+            flex-wrap:wrap ;
+            >h2{
+                color: #ff6733;
+                font-weight: 600;
+                font-size: 3rem;
+            }
+            >p{
+                color: #000;
+            }
+        }
+        li:nth-child(2){
+            border-left: 1px solid #ccc;   
+        }
+    }
+    
+}*/
+.user_money_info{
+    width: 96%;
+    position: absolute;
+    top:6.5rem;
+    left: 2%;
+    border-radius: 5px;
+    height: 5.2rem;
+    z-index: 66;
+    .user_money_items{
+        width: 100%;
+        display: flex;
+        margin: 0;
+        li{
+            flex: 1;
+            text-align: center;
+            p{
+                border-radius: 15px;
+                width: 70%;
+                font-size: 0.7rem;
+                text-align: center;
+                display: inline-block;
+                box-shadow: 2px 5px 43px #a7d7ec;
+                margin-bottom: 0;
+                margin-top: 1.2rem;
+                height: 1.4rem;
+                line-height: 1.4rem
+            }
+            span{
+                display: block;
+                padding-top: 0.5rem;
+            }
+        }
+    }
+}
+.media_list{
+    width: 100%;
+    width: 96%;
+    margin:0 auto;
+    margin-top:3rem; 
+    // padding-bottom: 44px;
+    height: 12rem;
+    position: relative;
+    .list_item{
+        width: 33.33%;
+        text-align: center;
+        // min-height: 1.5rem;
+        line-height: 4rem;
+        // border-bottom: 1px solid #eee;
+        position: relative;
+        display: inline-block;
+        a{
+            .list-item-icon{
+                display: inline-block;
+                margin-left: 0.3rem;
+                width: 40px;
+                height: 40px;
+                background: url(../../assets/img/money.png) no-repeat;
+                background-size: 100% 100%;
+                vertical-align: middle;
+                margin-top: 0.6rem;
+            }
+            span{
+                display: block;
+                font-size: 0.75rem;
+                line-height: 1.5rem;
+            }
+            >.tixian{
+                background:url(../../assets/img/money.png) no-repeat;
+                background-size:100% 100% ;  
+            }
+            >.record{
+                background:url(../../assets/img/record.png) no-repeat;
+                background-size:100% 100% ;  
+            }
+            >.Profit{
+                background:url(../../assets/img/Profit.png) no-repeat;
+                background-size:100% 100% ;  
+            }
+            >.histroy{
+                background:url(../../assets/img/histroy.png) no-repeat;
+                background-size:100% 100% ;  
+            }
+            >.fov{
+                background:url(../../assets/img/fov.png) no-repeat;
+                background-size:100% 100% ; 
+            }
+            >.common{
+                background:url(../../assets/img/userCommon.png) no-repeat;
+                background-size:100% 100% ; 
+            }
+            >.about{
+                background:url(../../assets/img/about.png) no-repeat;
+                background-size:100% 100% ; 
+            }
+            >.problem{
+                background:url(../../assets/img/problem.png) no-repeat;
+                background-size:100% 100% ; 
+            }
+            .list-item-right{
+                display: inline-block;
+                float: right;
+                margin-right: 0.5rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: url(../../assets/img/arrow_right.png) no-repeat;
+                background-size:100% 100% ;
+                position: absolute;
+                top: 0.8rem;
+                right: 0.5rem;
+            }
+        }
+    }
+}
