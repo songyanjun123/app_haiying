@@ -1,6 +1,6 @@
 
-// const host = 'http://sdk.54weitang.cn/'; 
-const host = 'http://hyapp.52weitang.cn/'; // service url  http://sdk.54weitang.cn/
+
+const host = ''; // service url  
  
 /* common url  */
 export const Urls = {
